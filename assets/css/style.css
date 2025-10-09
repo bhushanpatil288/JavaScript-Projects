@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Glass effect background */
+/* rgba(255,255,255,0.6) + backdrop-filter: blur(15px); */
+
+:root{
+    /* using this to avoid bootstrap conflicts */
+    --this-bg-light: #ececec;
+    --this-bg-dark: #1C1C1E;
+    --accent: #007AFF;
+    --this-text-primary-light: #000000;
+    --this-text-primary-dark: #FFFFFF;
+    --this-border: rgba(0,0,0,0.1)/rgba(255,255,255,0.1);
+    --this-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    color: var(--this-text-primary-light);
+}
+
+body{
+    /* background-color: var(--this-bg-light); */
+    background-image: url(../img/Mountain_andy_betts.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no=repeat;
+    background-attachment: fixed;
+}
+
+
+/* header start*/
+
+.settings-menu{
+    margin-left: -70px;
+    margin-top: 16px;
+}
+
+/* header end */
+
+
+
+/* main start */
+
+/* main end */
+
+
+
+/* footer start */
+
+/* footer end */

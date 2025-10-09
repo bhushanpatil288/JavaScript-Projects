@@ -1,0 +1,15 @@
+.backdrop {
+    background-color: var(--this-bg-light);
+    opacity: 0.7;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+}
