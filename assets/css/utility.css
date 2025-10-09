@@ -7,6 +7,58 @@ body.dark .backdrop{
     background-color: var(--this-bg-dark);
 }
 
+.this-bg-light{
+    background-color: var(--this-bg-light);
+}
+
+.this-bg-dark{
+    background-color: var(--this-bg-dark);
+}
+
+.window-light{
+    opacity: 0.95;
+    padding: 30px;
+    background-color: var(--this-text-primary-dark);
+    border-radius: 14px;
+    color: var(--this-text-primary-light);
+}
+
+body.dark .window-light{
+    opacity: 0.9;
+    background-color: var(--this-text-primary-light);
+    color: var(--this-text-primary-dark);
+}
+
+.dark-card{
+    background-color: var(--this-bg-dark);
+    color: var(--this-text-primary-dark);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.205);
+    margin-top: 20px;
+    transition: all 0.2s linear;
+}
+
+body.dark .dark-card{
+    background-color: var(--this-bg-light);
+    color: var(--this-text-primary-light);
+    box-shadow: var(--this-shadow-light);
+}
+
+.light-card{
+    background-color: var(--this-bg-light);
+    color: var(--this-text-primary-light);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.205);
+    margin-top: 20px;
+}
+
+body.dark .light-card{
+    background-color: var(--this-bg-dark);
+    color: var(--this-text-primary-dark);
+}
+
 /* hover effects */
 
 
@@ -32,10 +84,6 @@ body.dark .backdrop{
 .transition{
     transition: all 0.1s linear;
 }
-
-
-
-
 
 /* hiding showing effects */
 
