@@ -1,7 +1,7 @@
 /* backgrounds */
 .backdrop {
     background-color: var(--this-bg-light);
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 body.dark .backdrop{
     background-color: var(--this-bg-dark);
@@ -16,21 +16,54 @@ body.dark .backdrop{
 }
 
 .window-light{
-    opacity: 0.95;
+    /* opacity: 0.95; */
     padding: 30px;
-    background-color: var(--this-text-primary-dark);
+    background-color: var(--window-bg-light);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-radius: 14px;
     color: var(--this-text-primary-light);
 }
 
 body.dark .window-light{
-    opacity: 0.9;
-    background-color: var(--this-text-primary-light);
+    /* opacity: 0.9; */
+    background-color: var(--this-bg-dark);
     color: var(--this-text-primary-dark);
 }
 
+.top-deco::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 14px;
+    background: linear-gradient(90deg, var(--accent), #FF6B6B, #4ECDC4);
+    border-radius: 16px 16px 0 0;
+}
+
+.project-card.top-deco::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #FF6B6B, #4ECDC4);
+    border-radius: 16px 16px 0 0;
+}
+
+.project-card{
+    transition: all 0.2s linear;
+}
+
+.project-card:hover{
+    box-shadow: 0px 0px 20px 0 var(--accent-light);
+    scale: 1.01;
+}
+
 .dark-card{
-    background-color: var(--this-bg-dark);
+    background-color: var(--accent-light);
     color: var(--this-text-primary-dark);
     padding: 20px;
     border-radius: 14px;
@@ -40,24 +73,29 @@ body.dark .window-light{
 }
 
 body.dark .dark-card{
+    background-color: #300331;
+    box-shadow: 0px 0px 10px 0px rgb(68, 68, 68);
+}
+
+/* body.dark .dark-card{
     background-color: var(--this-bg-light);
     color: var(--this-text-primary-light);
     box-shadow: var(--this-shadow-light);
-}
+} */
 
-.light-card{
+/* .light-card{
     background-color: var(--this-bg-light);
     color: var(--this-text-primary-light);
     padding: 20px;
     border-radius: 14px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.205);
     margin-top: 20px;
-}
+} */
 
-body.dark .light-card{
+/* body.dark .light-card{
     background-color: var(--this-bg-dark);
     color: var(--this-text-primary-dark);
-}
+} */
 
 /* hover effects */
 
@@ -65,6 +103,7 @@ body.dark .light-card{
 .hover:hover{
     scale: 1.05;
     cursor: pointer;
+    border-radius: 6px;
 }
 .hover:active{
     scale: 0.95;
@@ -96,4 +135,28 @@ body.dark .light-card{
 .visible{
     visibility: visible;
     opacity: 1;
+}
+
+
+/* text */
+
+.text-gradient {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--accent), #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-sec-light{
+    color: var(--this-text-secondary-light);
+}
+
+/* spacings */
+
+.m-100{
+    margin-top: 100px;
 }

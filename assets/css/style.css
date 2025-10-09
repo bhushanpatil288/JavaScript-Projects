@@ -4,12 +4,14 @@
 
 :root{
     /* using this to avoid bootstrap conflicts */
-    --this-bg-light: #ececec;
-    --this-bg-dark: #1C1C1E;
+    --this-bg-light: #fff;
+    --this-bg-dark: rgb(26, 26, 26);
     --accent: #007AFF;
+    --accent-light: #91b7e0;
     --this-text-primary-light: #000000;
     --this-text-primary-dark: #FFFFFF;
     --this-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --window-bg-light: rgb(255, 255, 255);;
 }
 
 *{
@@ -28,7 +30,9 @@ body.dark{
 
 body{
     /* background-color: var(--this-bg-light); */
-    background-image: url(../img/Mountain_andy_betts.png);
+    /* background-image: url(../img/Mountain_andy_betts.png); */
+    /* background-image: url(../img/5120x2880.png); */
+    background-color: rgb(230, 230, 230);
     background-position: center center;
     background-size: cover;
     background-repeat: no=repeat;
@@ -36,7 +40,8 @@ body{
 }
 
 body.dark{
-    background-image: url(../img/13-Ventura-Dark-thumb.jpg);
+    /* background-image: url(../img/5120x2880.png); */
+    background-color: rgb(90, 1, 90);
 }
 
 
@@ -81,13 +86,24 @@ header{
     padding-bottom: 14px;
     display: flex;
     gap: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.185); */
     margin-bottom: 10px;
 }
 
-body.dark .title-bar{
-    border-bottom: 1px solid rgb(110, 110, 110);
+.code-symbol{
+    font-size: 12rem;
+    color: var(--accent-light);
 }
+
+/* hero section end */
+
+/* project section start */
+
+body.dark .projects-section .project-card.window-light p{
+    color: white !important;
+}
+
+/* project section end */
 
 /* main end */
 

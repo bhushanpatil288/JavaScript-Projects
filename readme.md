@@ -4,7 +4,7 @@
 ---------------------------------------
 to create window use this structure
 
-<div class="shadow-lg window-light">
+<div class="shadow-lg window-light top-deco">
     <div class="title-bar">
         <div class="red hover"></div>
         <div class="yellow hover"></div>
