@@ -52,6 +52,16 @@ header{
     z-index: 999;
 }
 
+.navbar{
+    background-color: #ffffff3a !important;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+body.dark .navbar{
+    background-color: #00000091 !important;
+}
+
 .settings-menu{
     margin-left: -70px;
     margin-top: 16px;
