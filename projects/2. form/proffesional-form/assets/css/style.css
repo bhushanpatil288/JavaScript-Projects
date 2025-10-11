@@ -1,0 +1,60 @@
+:root{
+    --my-bg-light: #F8F8F8;
+    --text-body: #6B727F;
+    --accent: #69B19F;
+}
+
+*{
+    color: var(--text-body);
+}
+body{
+    background-color: var(--my-bg-light);
+}
+
+/* utilities start*/
+.my-bg-light{
+    background-color: var(--my-bg-light) !important;
+}
+
+.bg-accent{
+    background-color: var(--accent) !important;
+}
+
+.my-text-body{
+    color: var(--text-body) !important;
+}
+/* utilities end */
+
+/* main  */
+
+h1{
+    font-family: monospace;
+    font-weight: 300;
+}
+
+#registrationForm{
+    box-shadow: 0px 0px 10px 0px var(--accent);
+    border: 1px solid var(--accent);
+    animation: spiral 5s linear none infinite !important;
+}
+
+@keyframes spiral{
+    0%{
+        box-shadow: 3px 0px 10px 0px var(--accent);
+    } 25%{
+        box-shadow: 0px 3px 10px 0px var(--accent);
+    } 50%{
+        box-shadow: -3px 0px 10px 0px var(--accent);
+    } 75% {
+        box-shadow: 0px -3px 10px 0px var(--accent);
+    } 100%{
+        box-shadow: 3px 0px 10px 0px var(--accent);
+    }
+}
+
+input.form-control:focus, select.form-control:focus, textarea.form-control:focus{
+    box-shadow: 0px 0px 10px 0px var(--accent);
+    border: 2px solid var(--accent);
+}
+
+/* main end */
