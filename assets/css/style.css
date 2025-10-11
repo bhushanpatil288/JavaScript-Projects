@@ -54,8 +54,8 @@ header{
 
 .navbar{
     background-color: #ffffff3a !important;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important;
 }
 
 body.dark .navbar{
