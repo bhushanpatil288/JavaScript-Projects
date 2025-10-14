@@ -10,8 +10,19 @@ $(document).ready(function(){
         let userPass = document.getElementById('userPass').value;
         let userCPass = document.getElementById('userCPass').value;
         let address = document.getElementById('address').value;
+        let phone = document.getElementById('phone').value;
+
+        let gender;
+            if (male.checked) {
+                gender = male.value;
+            } else if (female.checked) {
+                gender = female.value;
+            } else {
+                gender = null;
+            }
 
         let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let phoneRegex = /^[0-9]{10}$/
         
         if (userName.trim() === ''){
             Swal.fire("Please Enter Username!");
@@ -21,9 +32,27 @@ $(document).ready(function(){
             Swal.fire("Please Enter Valid Email!");
             return;
         }
-        if (userAge < 18 || userAge > 100 || userAge.length === ''){
+        if (userAge === ""){
             Swal.fire("Please Enter Valid Age!");
             return;
+        } else {
+            let enteredDate = new Date(userAge);
+            let today = new Date();
+
+            if (enteredDate > today) {
+                Swal.fire("Please enter a valid Date of Birth. Future dates are not allowed. Only 18+ users can register. 🎂");
+                return;
+            }
+            let age = today.getFullYear() - enteredDate.getFullYear();
+            let m = today.getMonth() - enteredDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < enteredDate.getDate())) {
+                age--;
+            }
+
+            if (age < 18) {
+                Swal.fire("Access denied! 🚫 Only 18+ users can register.");
+                return;
+            }
         }
         if (userCourse === ""){
             Swal.fire("Please Select Course!");
@@ -39,6 +68,14 @@ $(document).ready(function(){
         }
         if (address.length < 10 || address.trim() === ''){
             Swal.fire("Please enter valid Address");
+            return;
+        }
+        if (!phoneRegex.test(phone)){
+            swal.fire("Please enter valid 10 digit phone number!")
+            return;
+        }
+        if (!gender) {
+            Swal.fire("select your gender");
             return;
         }
         registrationForm.submit();
