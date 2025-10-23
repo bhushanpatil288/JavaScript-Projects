@@ -121,4 +121,17 @@ body.dark .projects-section .project-card.window-light p{
 
 /* footer start */
 
+.flicker{
+    animation: flick 1s linear infinite;
+}
+
+@keyframes flick {
+     0%, 50%, 100% {
+    opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
 /* footer end */
