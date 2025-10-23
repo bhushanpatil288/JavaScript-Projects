@@ -159,6 +159,23 @@ body.dark .dark-card{
     color: var(--this-text-secondary-light);
 }
 
+.tag-container{
+    margin-bottom: 20px;
+}
+
+.tag{
+    border: 1px solid #2D6EFF;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+    color: #2D6EFF;
+}
+
 /* spacings */
 
 .m-100{
