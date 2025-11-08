@@ -102,7 +102,6 @@ body.dark .dark-card{
 
 .hover:hover{
     scale: 1.05;
-    cursor: pointer;
     border-radius: 6px;
 }
 .hover:active{
