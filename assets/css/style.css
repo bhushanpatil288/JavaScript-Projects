@@ -67,6 +67,14 @@ body.dark .navbar{
     margin-top: 16px;
 }
 
+.theme-toggle:hover{
+    background-color: var(--accent-light);
+}
+
+body.dark .theme-toggle:hover{
+    background-color: var(--accent);
+}
+
 /* header end */
 
 

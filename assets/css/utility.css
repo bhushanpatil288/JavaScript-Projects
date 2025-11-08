@@ -23,6 +23,7 @@ body.dark .backdrop{
     backdrop-filter: blur(20px);
     border-radius: 14px;
     color: var(--this-text-primary-light);
+    transition: all 0.2s linear;
 }
 
 body.dark .window-light{
